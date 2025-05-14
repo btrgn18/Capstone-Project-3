@@ -2,50 +2,32 @@
 >`AIMAR MOHAMMAD BUTRAGUENO`
 
 # **Context**
-<blockquote style="text-align: justify">
 Apartments have become the primary solution to meet housing needs in urban areas due to limited land availability and the high intensity of business activities in cities. In Daegu, determining the selling price of an apartment is crucial to ensure that owners gain optimal profit without losing competitiveness in the market. Mispricing can lead to difficulties in selling apartment units or result in suboptimal profits. Therefore, an analytical approach is needed to predict the right price based on various factors such as apartment size, available facilities, transportation access, and the surrounding environment.
-</blockquote>
 
 # **Problem Statement**
-<blockquote style="text-align: justify">
 In the urban area of Daegu, determining the appropriate selling price of apartments is a critical challenge due to the complex interplay of internal and external factors influencing property value. Apartment owners often struggle to set competitive prices that balance profitability with market demand. Without a data-driven pricing strategy, there is a risk of overpricing, which can deter buyers, or underpricing, which leads to financial losses. Therefore, there is a need for an accurate predictive model that can analyze historical apartment sales data and identify key factors—such as size, facilities, transportation access, and neighborhood conditions—to estimate optimal apartment prices and support informed decision-making in the real estate market.
-</blockquote>
 
 # **Goals**
-<blockquote style="text-align: justify">
-
 - To develop an accurate apartment price prediction model based on historical data.
 - To identify the features or factors that most significantly influence apartment prices in Daegu.
 - To provide optimal price recommendations that apartment owners can use for selling decisions.
-</blockquote>
 
 # **Analytical Approach**
-<blockquote style="text-align: justify">
-
 - Utilizing regression techniques to predict apartment prices.
 - Conducting Exploratory Data Analysis (EDA) to understand the characteristics of the data.
 - Performing data preprocessing including handling missing values, encoding categorical variables, and normalizing numerical features.
 - Evaluating multiple regression models such as Linear Regression, Decision Tree Regression, and Random Forest Regression to select the best-performing model.
 - Applying feature importance techniques to identify the most influential factors affecting apartment prices.
-</blockquote>
 
 # **Evaluation Metrics**
-<blockquote style="text-align: justify">
-
 - Root Mean Squared Error (RMSE) to evaluate prediction accuracy.
 - Mean Absolute Error (MAE) as an additional indicator to understand the average prediction error.
 - R-squared (R²) to measure the extent to which independent variables explain the variability of apartment prices.
-</blockquote>
 
 # **Stakeholder**
-<blockquote style="text-align: justify">
-
 Store Manager dan Marketing & Sales Teams
-<blockquote>
-  
-# **Data Dictionary**
-<blockquote style="text-align: justify">
 
+# **Data Dictionary**
 **FEATURES**
 | Column | Description (EN) | Deskripsi (ID)
 | -- | --- | ---
@@ -60,10 +42,8 @@ Store Manager dan Marketing & Sales Teams
 | N_FacilitiesInApt | Number of facilities in the apartment | Jumlah fasilitas di dalam apartemen
 | Size (sqf) | The apartment size (in square feet) | Ukuran apartemen (dalam kaki persegi)
 | SalePrice | The apartment price (Won) | Harga apartemen (dalam Won)
-<blockquote>
 
 # **Metodologi**
-<blockquote style="text-align: justify">
 1. **Data Understanding & EDA**
 2. **Data Preprocessing**
 3. **Feature Engineering**
@@ -75,43 +55,47 @@ Store Manager dan Marketing & Sales Teams
 
 ---
 
-# **Kesimpulan**
-Project ini bertujuan untuk membangun model prediktif yang mampu mengestimasi harga apartemen di Kota Daegu secara akurat, serta mengidentifikasi faktor-faktor utama yang memengaruhi nilai pasar properti tersebut.
+# **Conclusion**
+This project aims to develop a predictive model capable of accurately estimating apartment prices in Daegu City, as well as identifying the key factors that influence the market value of these properties.
 
-Melalui serangkaian proses seperti eksplorasi data, preprocessing, feature engineering, modeling baseline, dan hyperparameter tuning, diperoleh model final berbasis `Random Forest Regressor` yang telah dioptimalkan menggunakan `RandomizedSearchCV`.
+Through a series of processes including data exploration, preprocessing, feature engineering, baseline modeling, and hyperparameter tuning, a final model based on the `Random Forest Regressor` was obtained and optimized using `RandomizedSearchCV`.
 
-Hasil evaluasi menunjukkan bahwa model tersebut memiliki performa yang sangat baik, dengan skor sebagai berikut:
-
+Evaluation results show that the model performs very well, with the following scores:
 > `MAE` = 33.171
 
 > `RMSE` = 42.004
 
 > `R²` = 0.8335
 
-Untuk memastikan stabilitas dan keadilan prediksi model, dilakukan juga `Residual Analysis`. Hasil visualisasi residual menunjukkan bahwa:
+To ensure the stability and fairness of the model's predictions, a `Residual Analysis` was also conducted. The residual visualization results indicate that:
+- Errors are randomly and evenly distributed across the entire prediction range
 
-- Error menyebar secara acak dan merata di seluruh rentang prediksi
-- Distribusi residual mendekati normal
-- Tidak ditemukan pola sistematis atau bias terhadap harga rendah atau tinggi
+- The residuals follow a near-normal distribution
 
-Hal ini membuktikan bahwa model tidak hanya akurat secara metrik, tapi juga stabil dan valid secara statistik.
-Model ini dapat dijadikan acuan dalam sistem pricing apartemen yang lebih objektif dan berbasis data.
+- No systematic patterns or biases were found toward low or high prices
 
-# **Rekomendasi Bisnis**
-Berdasarkan hasil analisis modeling dan interpretasi fitur terpenting, beberapa rekomendasi yang dapat diberikan antara lain:
+These findings demonstrate that the model is not only accurate in terms of metrics, but also statistically stable and valid.
+This model can serve as a reference for a more objective and data-driven apartment pricing system.
 
-1. Fokus pada aspek ukuran unit (`Size`)
-Luas apartemen adalah faktor paling dominan dalam menentukan harga. Developer dapat menekankan desain unit yang lebih luas dan efisien.
+# **Business Recommendations**
+Based on the modeling results and interpretation of the most important features, several recommendations can be made:
 
-2. Perhatikan desain interior dan hallway
-`HallwayType` terbukti menjadi fitur penting. Desain lorong dan akses antar unit dapat memengaruhi persepsi nilai dari konsumen.
+1. Focus on unit size (`Size`)
 
-3. Pertimbangkan faktor usia bangunan
-Unit yang lebih baru memiliki harga jual lebih tinggi. Untuk unit lama, strategi renovasi dan modernisasi bisa menjadi solusi untuk meningkatkan nilai pasar.
+  Apartment size is the most dominant factor in determining price. Developers should emphasize designing more spacious and efficient units.
 
-4. Gunakan model ini sebagai alat bantu pricing
-Model `Random Forest` ini dapat digunakan oleh agen properti dan pemilik apartemen sebagai panduan objektif dalam menentukan harga yang kompetitif dan realistis, tanpa underprice maupun overprice.
+2. Pay attention to interior and hallway design
 
+  `HallwayType` has proven to be an important feature. The layout and accessibility of hallways can influence consumer perception of value.
+
+3. Consider the age of the building
+
+  Newer units tend to have higher selling prices. For older units, renovation and modernization strategies can be effective in increasing market value.
+
+4. Utilize this model as a pricing support tool
+
+  The `Random Forest` model can be used by real estate agents and apartment owners as an objective guide for setting competitive and realistic prices—avoiding both underpricing and overpricing.
+  
 ---
 
 # Link Video Presentation
