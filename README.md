@@ -25,7 +25,9 @@ In the urban area of Daegu, determining the appropriate selling price of apartme
 - R-squared (R²) to measure the extent to which independent variables explain the variability of apartment prices.
 
 # **Stakeholder**
-Store Manager dan Marketing & Sales Teams
+- Apartment Owners
+- Sales Agents
+- Apartment Developers
 
 # **Data Dictionary**
 **FEATURES**
@@ -43,7 +45,7 @@ Store Manager dan Marketing & Sales Teams
 | Size (sqf) | The apartment size (in square feet) | Ukuran apartemen (dalam kaki persegi)
 | SalePrice | The apartment price (Won) | Harga apartemen (dalam Won)
 
-# **Metodologi**
+# **Methodology**
 1. **Data Understanding & EDA**
 2. **Data Preprocessing**
 3. **Feature Engineering**
