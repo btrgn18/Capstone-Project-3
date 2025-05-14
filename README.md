@@ -1,4 +1,5 @@
-# CAPSTONE MODULE 03 - DAEGU APARTMENT
+# CAPSTONE MODULE 03
+# Apartment Price Prediction in Daegu City Using Regression Models and Key Feature Analysis
 >`AIMAR MOHAMMAD BUTRAGUENO`
 
 # **Context**
